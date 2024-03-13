@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-Inter text-base text-black;
+}
+
+.lh-main{
+    @apply w-full h-full bg-white min-h-screen;
+    @apply bg-[url('/images/bg.svg')] bg-no-repeat bg-cover bg-left-top;
+}
+.lh-main__inner{
+    @apply w-full max-w-[1922px] mx-auto;
+}
+.lh-container{
+    @apply w-full max-w-[1320px] mx-auto;
+}
+.lh-nav{
+    @apply w-full py-10 flex items-center justify-between gap-5;
+}
+.lh-nav__menu{
+    @apply flex items-center gap-14;
+}
+.lh-nav__menu-link{
+    @apply text-lg text-black font-medium hover:text-primary transition-all;
+}
+.lh-nav__toggle{
+    @apply w-auto h-auto p-0 m-0;
+}
+.lh-nav__toggle-icon{
+    @apply w-[28px] h-[24px];
+}
+
+.lh-hero{
+    @apply px-[180px] py-[100px] relative;
+}
+.lh-hero__content{
+    @apply w-full flex flex-col items-end justify-end text-right;
+}
+.lh-hero__title{
+    @apply text-[140px] leading-[1] font-semibold text-right relative text-primary z-10;
+}
+.lh-hero__title-icon{
+    @apply absolute -left-12 -top-12
+}
+.lh-hero__image-right{
+    @apply mt-40 z-20
+}
+.lh-hero__line{
+    @apply absolute right-40 top-24 z-10
+}
