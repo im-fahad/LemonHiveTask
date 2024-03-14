@@ -27,6 +27,9 @@ const config: Config = {
       container: {
         center: true,
       },
+      boxShadow:{
+        one:'0px 4px 8px 0px #0000000F'
+      }
     },
   },
   plugins: [],

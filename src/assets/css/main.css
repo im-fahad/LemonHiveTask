@@ -15,9 +15,11 @@ body {
 .lh-main__inner{
     @apply w-full max-w-[1922px] mx-auto;
 }
+/*container*/
 .lh-container{
     @apply w-full max-w-[1320px] mx-auto;
 }
+/*nav*/
 .lh-nav{
     @apply w-full py-10 flex items-center justify-between gap-5;
 }
@@ -34,6 +36,7 @@ body {
     @apply w-[28px] h-[24px];
 }
 
+/*header*/
 .lh-hero{
     @apply px-[180px] py-[100px] relative;
 }
@@ -73,4 +76,77 @@ body {
 }
 .lh-hero__scroll-button-icon{
     @apply rotate-90;
+}
+
+/*section*/
+.lh-section{
+    @apply w-full my-[100px];
+}
+.lh-section__title{
+    @apply w-full text-center text-5xl font-semibold mb-10;
+}
+
+/*conferences*/
+.conferences{
+    @apply w-full;
+}
+.conferences__item{
+    @apply flex pb-16 gap-10 last:pb-0;
+}
+.conferences__item-left,
+.conferences__item-right{
+    @apply flex-1;
+}
+.conferences__item-left{
+    @apply flex justify-end;
+}
+.conferences__item-right{
+    @apply flex items-start justify-start;
+}
+.conference-card{
+    @apply px-4 py-7 bg-grayLight rounded-lg border-t-4 border-t-gray;
+    @apply flex items-start gap-4 min-w-[480px] shadow-[0_4px_8px_0] shadow-gray/40;
+    @apply hover:border-secondary hover:shadow-gray transition-all;
+}
+.conference-card__inner{
+    @apply -mt-[5px]
+}
+.conference-card__title{
+    @apply text-lg text-primary font-medium
+}
+.conference-card__desc{
+    @apply text-sm text-grayDark font-normal
+}
+
+.conferences__item-center{
+    @apply relative flex justify-center;
+}
+
+.conferences__item-center:before{
+    @apply content-[""] w-[2px] h-[105%] bg-gray absolute top-[53px];
+}
+.conferences__item-icon{
+    @apply w-12 h-12 rounded-full border border-gray bg-grayLight;
+    @apply flex items-center justify-center;
+}
+.conferences__item-icon-img{
+    @apply fill-gray;
+}
+.conferences__item-date{
+    @apply text-sm text-grayDark font-normal mt-4;
+}
+
+.active .conferences__item-center:before{
+    @apply bg-secondary;
+}
+
+.active .conferences__item-icon{
+    @apply border-secondary;
+}
+.active .conferences__item-icon-img{
+    @apply fill-secondary;
+}
+
+.conferences__item:last-child > .conferences__item-center:before{
+    @apply content-none;
 }
