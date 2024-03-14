@@ -1,0 +1,74 @@
+.lh-conference {
+    @apply w-full py-[100px];
+}
+
+.lh-conference__head {
+    @apply text-3xl mb-[52px]
+}
+
+.lh-conference__title {
+    @apply text-5xl text-black font-semibold;
+}
+
+.lh-conference__desc {
+    @apply text-xl text-grayDark font-light mt-4;
+}
+
+.lh-conference__inner {
+    @apply flex gap-12;
+}
+
+.lh-conference__sidebar {
+    @apply w-full max-w-[365px];
+}
+
+.lh-conference__content {
+    @apply flex-1;
+}
+
+.lh-conference-sidebar {
+    @apply w-full flex flex-col gap-8;
+}
+
+.lh-conference-sidebar__item {
+    @apply flex items-center gap-11 p-2 rounded-lg border border-gray;
+    @apply text-xl font-semibold text-primary transition-all;
+}
+
+.lh-conference-sidebar__item.active {
+    @apply border-secondary bg-secondary text-white shadow-[0px_10px_20px_0px] shadow-gray/60;
+}
+
+.lh-conference-sidebar__item-icon {
+    @apply w-[54px] h-[54px] rounded-lg bg-secondary/5 flex items-center justify-center transition-all;
+}
+
+.active .lh-conference-sidebar__item-icon {
+    @apply bg-white;
+}
+
+.lh-conference__content {
+    @apply bg-grayLight p-[52px] rounded-lg;
+    @apply flex flex-col gap-6;
+}
+
+.lh-conference-card {
+    @apply flex items-center gap-10 bg-white rounded-lg p-4 pr-10;
+}
+
+.lh-conference-card__inner {
+    @apply flex-1 flex flex-col gap-4;
+}
+
+.lh-conference-card__title {
+    @apply text-xl text-primary font-semibold;
+}
+
+.lh-conference-card__desc {
+    @apply text-base text-grayDark font-normal;
+}
+
+.lh-conference-card__social {
+    @apply flex items-center justify-center gap-4
+}
+
