@@ -37,7 +37,7 @@ body {
 .lh-hero{
     @apply px-[180px] py-[100px] relative;
 }
-.lh-hero__content{
+.lh-hero__top{
     @apply w-full flex flex-col items-end justify-end text-right;
 }
 .lh-hero__title{
@@ -51,4 +51,26 @@ body {
 }
 .lh-hero__line{
     @apply absolute right-40 top-24 z-10
+}
+
+.lh-hero__content{
+    @apply flex mt-[30px];
+}
+.lh-hero__content-desc{
+    @apply text-lg text-black font-normal;
+}
+
+.lh-hero__content-button{
+    @apply py-4 px-6 flex items-center justify-center gap-2 text-lg rounded-full;
+    @apply bg-secondary min-w-[290px] mt-20 text-primary;
+}
+
+.lh-hero__scroll{
+    @apply w-full flex items-center justify-center absolute left-0 bottom-80 z-30;
+}
+.lh-hero__scroll-button{
+    @apply flex items-center justify-center gap-1 -rotate-90 cursor-pointer text-primary;
+}
+.lh-hero__scroll-button-icon{
+    @apply rotate-90;
 }
