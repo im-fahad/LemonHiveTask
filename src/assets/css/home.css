@@ -104,3 +104,17 @@
 .conferences__item:last-child > .conferences__item-center:before{
     @apply content-none;
 }
+
+/*sponsors*/
+.sponsors{
+    @apply flex flex-col items-center justify-center gap-8;
+}
+.sponsors__item{
+    @apply flex flex-col items-center justify-center gap-8;
+}
+.sponsors__images{
+    @apply flex items-center justify-center gap-14;
+}
+.sponsors__label{
+    @apply text-base font-medium text-grayDark;
+}

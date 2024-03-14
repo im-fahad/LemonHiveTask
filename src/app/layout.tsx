@@ -21,12 +21,10 @@ export default function RootLayout({
     <html lang="en">
     <body className={inter.className}>
     <main className="lh-main">
-      <div className="lh-main__inner">
         {/*nav*/}
         <Navbar/>
 
         {children}
-      </div>
       <footer className="lh-footer">
         <div className="lh-main__inner">
           <div className="lh-container">

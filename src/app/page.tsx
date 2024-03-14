@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import {Fragment} from "react";
@@ -7,6 +8,10 @@ interface conferencesTypes{
     desc:string,
     date:string,
     active:boolean
+}
+interface sponsorsTypes{
+    label:string,
+    images:string[],
 }
 export default function Home() {
     const isOdd = (num:number) => num % 2 === 1;
@@ -41,9 +46,37 @@ export default function Home() {
             date:"03 September, 2023",
             active:false
         },
+    ];
+
+    const sponsors:sponsorsTypes[]=[
+        {
+            label:"🥇 Gold Sponsor",
+            images:[
+                "/images/sponsors/gold-1.svg",
+                "/images/sponsors/gold-2.svg",
+            ],
+        },
+        {
+            label:"🥈Silver Sponsors",
+            images:[
+                "/images/sponsors/silver-1.svg",
+                "/images/sponsors/silver-2.svg",
+                "/images/sponsors/silver-3.svg",
+            ],
+        },
+        {
+            label:"🥉Bronze Sponsors",
+            images:[
+                "/images/sponsors/bronze-1.svg",
+                "/images/sponsors/bronze-2.svg",
+                "/images/sponsors/bronze-3.svg",
+                "/images/sponsors/bronze-4.svg",
+            ],
+        },
     ]
   return (
       <Fragment>
+          <div className="lh-main__inner">
           <header className="lh-hero">
               <Image src="/images/line.svg" className="lh-hero__line z-10" alt="hero Image" width={940} height={832}/>
               <div className="grid grid-flow-row grid-cols-5">
@@ -88,9 +121,11 @@ export default function Home() {
                   </button>
               </div>
           </header>
+          </div>
 
           <section className="lh-section">
-              <div className="lh-container">
+              <div className="lh-main__inner">
+                <div className="lh-container">
                   <h2 className="lh-section__title">
                       Conferences
                   </h2>
@@ -165,6 +200,32 @@ export default function Home() {
                               </div>
                           )
                       ))}
+                  </div>
+              </div>
+              </div>
+          </section>
+
+          <section className="lh-section bg-grayLight">
+              <div className="lh-main__inner">
+                  <div className="lh-container">
+                      <h2 className="lh-section__title">
+                          Our Sponsor
+                      </h2>
+
+                      <div className="sponsors">
+                          {sponsors.map((sponsor:sponsorsTypes,key:number) => (
+                              <div className="sponsors__item" key={key}>
+                                  <h5 className="sponsors__label">
+                                      {sponsor?.label}
+                                  </h5>
+                                  <div className="sponsors__images">
+                                      {sponsor?.images.map((image,i)=>(
+                                          <Image className="sponsors__img" src={image} alt={image} width={218} height={65}/>
+                                      ))}
+                                  </div>
+                              </div>
+                          ))}
+                      </div>
                   </div>
               </div>
           </section>
