@@ -1,0 +1,106 @@
+/*header*/
+.lh-hero{
+    @apply px-[180px] py-[100px] relative;
+}
+.lh-hero__top{
+    @apply w-full flex flex-col items-end justify-end text-right;
+}
+.lh-hero__title{
+    @apply text-[140px] leading-[1] font-semibold text-right relative text-primary z-10;
+}
+.lh-hero__title-icon{
+    @apply absolute -left-12 -top-12
+}
+.lh-hero__image-right{
+    @apply mt-40 z-20
+}
+.lh-hero__line{
+    @apply absolute right-40 top-24 z-10
+}
+
+.lh-hero__content{
+    @apply flex mt-[30px];
+}
+.lh-hero__content-desc{
+    @apply text-lg text-black font-normal;
+}
+
+.lh-hero__content-button{
+    @apply py-4 px-6 flex items-center justify-center gap-2 text-lg rounded-full;
+    @apply bg-secondary min-w-[290px] mt-20 text-primary;
+}
+
+.lh-hero__scroll{
+    @apply w-full flex items-center justify-center absolute left-0 bottom-80 z-30;
+}
+.lh-hero__scroll-button{
+    @apply flex items-center justify-center gap-1 -rotate-90 cursor-pointer text-primary;
+}
+.lh-hero__scroll-button-icon{
+    @apply rotate-90;
+}
+
+/*conferences*/
+.conferences{
+    @apply w-full;
+}
+.conferences__item{
+    @apply flex pb-16 gap-10 last:pb-0;
+}
+.conferences__item-left,
+.conferences__item-right{
+    @apply flex-1;
+}
+.conferences__item-left{
+    @apply flex justify-end;
+}
+.conferences__item-right{
+    @apply flex items-start justify-start;
+}
+.conference-card{
+    @apply px-4 py-7 bg-grayLight rounded-lg border-t-4 border-t-gray;
+    @apply flex items-start gap-4 min-w-[480px] shadow-[0_4px_8px_0] shadow-gray/30;
+    @apply hover:border-secondary hover:shadow-[0_4px_14px_0] hover:shadow-gray/60 transition-all duration-[400ms];
+}
+.conference-card__inner{
+    @apply -mt-[5px]
+}
+.conference-card__title{
+    @apply text-lg text-primary font-medium
+}
+.conference-card__desc{
+    @apply text-sm text-grayDark font-normal
+}
+
+.conferences__item-center{
+    @apply relative flex justify-center;
+}
+
+.conferences__item-center:before{
+    @apply content-[""] w-[2px] h-[105%] bg-gray absolute top-[53px];
+}
+.conferences__item-icon{
+    @apply w-12 h-12 rounded-full border border-gray bg-grayLight;
+    @apply flex items-center justify-center;
+}
+.conferences__item-icon-img{
+    @apply fill-gray;
+}
+.conferences__item-date{
+    @apply text-sm text-grayDark font-normal mt-4;
+}
+
+.active .conferences__item-center:before{
+    @apply bg-secondary;
+}
+
+.active .conferences__item-icon{
+    @apply border-secondary;
+}
+.active .conferences__item-icon-img{
+    @apply fill-secondary;
+}
+
+.conferences__item:last-child > .conferences__item-center:before{
+    @apply content-none;
+}

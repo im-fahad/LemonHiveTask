@@ -1,0 +1,50 @@
+.lh-main{
+    @apply w-full h-full bg-white min-h-screen;
+    @apply bg-[url('/images/bg.svg')] bg-no-repeat bg-cover bg-left-top;
+}
+.lh-main__inner{
+    @apply w-full max-w-[1922px] mx-auto;
+}
+/*container*/
+.lh-container{
+    @apply w-full max-w-[1320px] mx-auto;
+}
+
+/*section*/
+.lh-section{
+    @apply w-full my-[100px];
+}
+.lh-section__title{
+    @apply w-full text-center text-5xl font-semibold mb-10;
+}
+
+/*nav*/
+.lh-nav{
+    @apply w-full py-10 flex items-center justify-between gap-5;
+}
+.lh-nav__menu{
+    @apply flex items-center gap-14;
+}
+.lh-nav__menu-link{
+    @apply text-lg text-black font-medium hover:text-primary transition-all;
+}
+.lh-nav__toggle{
+    @apply w-auto h-auto p-0 m-0;
+}
+.lh-nav__toggle-icon{
+    @apply w-[28px] h-[24px];
+}
+
+/*footer*/
+.lh-footer{
+    @apply w-full bg-primary
+}
+.lh-footer__inner{
+    @apply py-[70px] flex flex-col items-center justify-center gap-20;
+}
+.lh-footer__social{
+    @apply flex items-center justify-center gap-8;
+}
+.lh-footer__copyright{
+    @apply text-lg text-white font-normal text-center mt-6;
+}

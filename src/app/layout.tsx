@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/assets/css/main.css";
+import Navbar from "@/components/Navbar";
+import Image from "next/image";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,45 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <body className={inter.className}>
+    <main className="lh-main">
+      <div className="lh-main__inner">
+        {/*nav*/}
+        <Navbar/>
+
+        {children}
+      </div>
+      <footer className="lh-footer">
+        <div className="lh-main__inner">
+          <div className="lh-container">
+            <div className="lh-footer__inner">
+              <Image src="/images/ReactWhite.svg" className="lh-footer__logo" alt="Footer logo" width={176} height={48}/>
+
+              <div className="flex-1">
+                <div className="lh-footer__social">
+                  <Link href="/" className="lh-footer__social-link">
+                    <Image src="/images/icons/SocialIcon.svg" alt="Social icon" width={24} height={24}/>
+                  </Link>
+                  <Link href="/" className="lh-footer__social-link">
+                    <Image src="/images/icons/SocialIcon-1.svg" alt="Social icon" width={24} height={24}/>
+                  </Link>
+                  <Link href="/" className="lh-footer__social-link">
+                    <Image src="/images/icons/SocialIcon-2.svg" alt="Social icon" width={24} height={24}/>
+                  </Link>
+                  <Link href="/" className="lh-footer__social-link">
+                    <Image src="/images/icons/SocialIcon-3.svg" alt="Social icon" width={24} height={24}/>
+                  </Link>
+                </div>
+                <p className="lh-footer__copyright">
+                  © 2023 Lemonhive. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    </body>
     </html>
   );
 }
