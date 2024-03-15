@@ -4,6 +4,7 @@ import Image from "next/image";
 import Organizers from "@/components/Organizers";
 import Speakers from "@/components/Speakers";
 import Sponsors from "@/components/Sponsors";
+import Schedules from "@/components/Schedules";
 
 export default function Conference() {
     const tabs = ["Organizer", "Speakers", "Schedule", "Sponsors"];
@@ -48,6 +49,9 @@ export default function Conference() {
                                 )}
                                 {activeTab === "Speakers" && (
                                     <Speakers/>
+                                )}
+                                {activeTab === "Schedule" && (
+                                    <Schedules/>
                                 )}
                                 {activeTab === "Sponsors" && (
                                     <Sponsors/>

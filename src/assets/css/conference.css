@@ -72,3 +72,19 @@
     @apply flex items-center justify-center gap-4
 }
 
+/*lh-schedule-card*/
+.lh-schedule-card {
+    @apply bg-white px-10 py-6 rounded-lg;
+}
+
+.lh-schedule-card__date {
+    @apply text-xl text-primary font-semibold;
+}
+
+.lh-schedule-card__day {
+    @apply text-base text-grayDark font-normal;
+}
+
+.lh-conference-card__inner {
+    @apply text-base text-grayDark font-normal;
+}
