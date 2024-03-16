@@ -53,7 +53,7 @@ export default function Speakers() {
 
                             <div className="lh-conference-card__social">
                                 {speaker?.social.map((item: string, key: number) => (
-                                    <Link href="/" className="lh-conference-card__social-link">
+                                    <Link href="/" className="lh-conference-card__social-link" key={key}>
                                         <Image src={item} alt={item} width={20} height={20}/>
                                     </Link>
                                 ))}
