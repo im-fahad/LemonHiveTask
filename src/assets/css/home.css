@@ -1,6 +1,13 @@
 /*header*/
 .lh-hero {
-    @apply px-[180px] py-[100px] relative;
+    @apply px-[20px] xs:px-[40px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[120px] 2xl:px-[140px] 3xl:px-[160px] 4xl:px-[180px];
+    @apply pt-28 sm:pt-32 md:pt-36 lg:pt-40 xl:pt-52 2xl:pt-60;
+    @apply pb-[60px] sm:pb-[70px] md:pb-[80px] lg:pb-[90px] xl:pb-[100px];
+    @apply bg-[url('/images/bg.svg')] bg-no-repeat bg-cover bg-left-top;
+}
+
+.lh-hero__inner {
+    @apply relative;
 }
 
 .lh-hero__top {
@@ -8,36 +15,41 @@
 }
 
 .lh-hero__title {
-    @apply text-[140px] leading-[1] font-semibold text-right relative text-primary z-10;
+    @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[140px];
+    @apply leading-[1] font-semibold text-right relative text-primary z-10;
 }
 
 .lh-hero__title-icon {
-    @apply absolute -left-12 -top-12
+    @apply absolute -left-6 sm:-left-7 md:-left-8 lg:-left-9 xl:-left-10 2xl:-left-12;
+    @apply -top-6 sm:-top-7 md:-top-8 lg:-top-9 xl:-top-10 2xl:-top-12;
+    @apply w-auto h-[40px] sm:h-[42px] md:h-[52px] lg:h-[62px] xl:h-[72px] 2xl:h-[82px]
 }
 
 .lh-hero__image-right {
-    @apply mt-40 z-20
+    @apply mt-10 sm:mt-14 md:mt-20 lg:mt-24 xl:mt-32 2xl:mt-40 z-20;
+    @apply h-auto w-full
 }
 
 .lh-hero__line {
-    @apply absolute right-40 top-24 z-10
+    @apply absolute right-11 -top-2 z-10
 }
 
 .lh-hero__content {
-    @apply flex mt-[30px];
+    @apply hidden xl:flex mt-[30px];
 }
 
 .lh-hero__content-desc {
-    @apply text-lg text-black font-normal;
+    @apply text-base sm:text-[17px] md:text-lg text-black font-normal;
 }
 
 .lh-hero__content-button {
-    @apply py-4 px-6 flex items-center justify-center gap-2 text-lg rounded-full;
-    @apply bg-secondary min-w-[290px] mt-20 text-primary;
+    @apply py-3 sm:py-3.5 md:py-4 px-4 sm:px-5 md:px-6;
+    @apply flex items-center justify-center gap-2 text-lg rounded-full;
+    @apply bg-secondary md:min-w-[290px] mt-10 2xl:mt-20 text-primary;
 }
 
 .lh-hero__scroll {
-    @apply w-full flex items-center justify-center absolute left-0 bottom-80 z-30;
+    @apply hidden w-full xl:flex items-center justify-center absolute left-0 bottom-[180px] z-30;
 }
 
 .lh-hero__scroll-button {
